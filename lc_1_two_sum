@@ -18,13 +18,15 @@ var twoSum = function(nums, target) {
     let pre = null
     let next = null
     let newArr = []
-    for(let i=0;i<nums.length; i++){
+    for(let i=0;i<nums.length; i++) {
         pre = nums[i]
-        for(let j=i+1; j<nums.length;j++){
+        for(let j=i+1; j<nums.length;j++) {
             next = nums[j]
-            if(testSum(pre,next,target)){
+            if(testSum(pre,next,target)) {
+            // when find the value, locate the index of the right value
                 for(let key in nums){
-                    if(nums[key] === pre||nums[key] === next){
+                    if(nums[key] === pre||nums[key] === next) {
+                    // key should be number
                         newArr.push(+key)
                     }
                 }
